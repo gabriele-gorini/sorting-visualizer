@@ -8,6 +8,7 @@ from colors import *
 from algorithms.bubblesort import bubble_sort
 from algorithms.insertionsort import insertion_sort
 from algorithms.mergesort import merge_sort
+from algorithms.quicksort import quick_sort
 
 #Creating the window
 window = Tk()
@@ -65,6 +66,17 @@ def sort():
         insertion_sort(data, drawData, timeTick)
     elif algo_menu.get() == 'Merge Sort':
         merge_sort(data, 0, len(data)-1, drawData, timeTick)
+    elif algo_menu.get() == 'Quick Sort':
+        quick_sort(data, 0, len(data)-1, drawData, timeTick)
+
+def is_sorted():
+    global data
+    print(data)
+    for i in range(len(data) - 1):
+        if data[i] > data[i+1]:
+            return False
+
+    return True
 
 #Used from the user to select which algorithm he wants to use
 algorithm_name = StringVar()
