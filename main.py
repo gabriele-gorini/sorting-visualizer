@@ -4,6 +4,7 @@ from tkinter import ttk
 import random
 
 from colors import *
+from algorithms.bubblesort import bubble_sort
 
 #Creating the window
 window = Tk()
@@ -56,8 +57,7 @@ def sort():
     timeTick = set_speed()
 
     if algo_menu.get() == 'Bubble Sort':
-        pass
-        #bubble_sort(data, drawData, timeTick)
+        bubble_sort(data, drawData, timeTick)
     elif algo_menu.get() == 'Merge Sort':
         pass
         #merge_sort(data, 0, len(data) - 1, drawData, timeTick)
