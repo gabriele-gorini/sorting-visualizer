@@ -3,9 +3,11 @@ from tkinter import ttk
 
 import random
 
+
 from colors import *
 from algorithms.bubblesort import bubble_sort
 from algorithms.insertionsort import insertion_sort
+from algorithms.mergesort import merge_sort
 
 #Creating the window
 window = Tk()
@@ -61,10 +63,12 @@ def sort():
         bubble_sort(data, drawData, timeTick)
     elif algo_menu.get() == 'Insertion Sort':
         insertion_sort(data, drawData, timeTick)
+    elif algo_menu.get() == 'Merge Sort':
+        merge_sort(data, 0, len(data)-1, drawData, timeTick)
 
 #Used from the user to select which algorithm he wants to use
 algorithm_name = StringVar()
-algo_list = ['Bubble Sort', 'MergeSort', 'Insertion Sort', 'Quick Sort']
+algo_list = ['Bubble Sort', 'Merge Sort', 'Insertion Sort', 'Quick Sort']
 
 #Used from the user to select the speed of the execution
 speed_name = StringVar()
