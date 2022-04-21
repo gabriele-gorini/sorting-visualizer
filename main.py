@@ -5,6 +5,7 @@ import random
 
 from colors import *
 from algorithms.bubblesort import bubble_sort
+from algorithms.insertionsort import insertion_sort
 
 #Creating the window
 window = Tk()
@@ -58,9 +59,8 @@ def sort():
 
     if algo_menu.get() == 'Bubble Sort':
         bubble_sort(data, drawData, timeTick)
-    elif algo_menu.get() == 'Merge Sort':
-        pass
-        #merge_sort(data, 0, len(data) - 1, drawData, timeTick)
+    elif algo_menu.get() == 'Insertion Sort':
+        insertion_sort(data, drawData, timeTick)
 
 #Used from the user to select which algorithm he wants to use
 algorithm_name = StringVar()
