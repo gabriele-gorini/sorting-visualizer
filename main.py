@@ -18,7 +18,7 @@ window.config(bg = WHITE)
 
 #This function will draw the randomly generated data on the canvas as vertical bars
 def drawData(data, colorArray):
-    canvas.delete("all")
+    canvas.delete('all')
     canvas_width = 800
     canvas_height = 400
     x_width = canvas_width / (len(data) + 1)
