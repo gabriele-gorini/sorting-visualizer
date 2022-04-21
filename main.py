@@ -103,4 +103,7 @@ generate_btn.grid(row=2, column=0, padx=5, pady=5)
 canvas = Canvas(window, width=800, height=400, bg=WHITE)
 canvas.grid(row=1, column=0, padx=10, pady=5)
 
+#Generate first random array
+generate()
+
 window.mainloop()
